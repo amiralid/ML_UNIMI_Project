@@ -4,7 +4,7 @@ This project focuses on building **Decision Tree** and **Random Forest** classif
 
 ## Project Overview
 
-Mushroom classification is crucial for food safety, and this project addresses it by:
+Mushroom classification addressed by:
 
 - Implementing custom **Decision Tree** and **Random Forest** algorithms.
 - Preprocessing and encoding a mushroom dataset with categorical features.
