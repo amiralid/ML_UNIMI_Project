@@ -1,0 +1,1410 @@
+
+column	null-count	% null-count
+0	veil-type	57892	94.797688
+1	spore-print-color	54715	89.595376
+2	veil-color	53656	87.861272
+3	stem-root	51538	84.393064
+4	stem-surface	38124	62.427746
+5	gill-spacing	25063	41.040462
+6	cap-surface	14120	23.121387
+7	gill-attachment	9884	16.184971
+8	ring-type	2471	4.046243
+9	class	0	0.000000
+10	stem-color	0	0.000000
+11	habitat	0	0.000000
+12	has-ring	0	0.000000
+13	stem-width	0	0.000000
+14	cap-diameter	0	0.000000
+15	stem-height	0	0.000000
+16	gill-color	0	0.000000
+17	does-bruise-or-bleed	0	0.000000
+18	cap-color	0	0.000000
+19	cap-shape	0	0.000000
+20	season	0	0.000000
+class	cap-diameter	cap-shape	cap-surface	cap-color	does-bruise-or-bleed	gill-attachment	gill-spacing	gill-color	stem-height	...	stem-root	stem-surface	stem-color	veil-type	veil-color	has-ring	ring-type	spore-print-color	habitat	season
+0	p	15.26	x	g	o	f	e	NaN	w	16.95	...	s	y	w	u	w	t	g	NaN	d	w
+1	p	16.60	x	g	o	f	e	NaN	w	17.99	...	s	y	w	u	w	t	g	NaN	d	u
+2	p	14.07	x	g	o	f	e	NaN	w	17.80	...	s	y	w	u	w	t	g	NaN	d	w
+3	p	14.17	f	h	e	f	e	NaN	w	15.77	...	s	y	w	u	w	t	p	NaN	d	w
+4	p	14.64	x	h	o	f	e	NaN	w	16.53	...	s	y	w	u	w	t	p	NaN	d	w
+5 rows × 21 columns
+
+(['stem-root', 'stem-surface', 'veil-type', 'veil-color', 'spore-print-color'],
+ (61069, 16))
+
+duplicates in raw data: 146
+duplicates in processed data: 0
+(   cap-diameter  cap-shape  cap-surface  cap-color  does-bruise-or-bleed  \
+ 0         15.26          6            2          6                     0   
+ 1         16.60          6            2          6                     0   
+ 2         14.07          6            2          6                     0   
+ 3         14.17          2            3          1                     0   
+ 4         14.64          6            3          6                     0   
+ 
+    gill-attachment  gill-spacing  gill-color  stem-height  stem-width  \
+ 0                2             3          10        16.95       17.09   
+ 1                2             3          10        17.99       18.19   
+ 2                2             3          10        17.80       17.74   
+ 3                2             3          10        15.77       15.98   
+ 4                2             3          10        16.53       17.20   
+ 
+    stem-color  has-ring  ring-type  habitat  season  
+ 0          11         1          2        0       3  
+ 1          11         1          2        0       2  
+ 2          11         1          2        0       3  
+ 3          11         1          6        0       3  
+ 4          11         1          6        0       3  ,
+ 0    1
+ 1    1
+ 2    1
+ 3    1
+ 4    1
+ Name: class, dtype: int64)
+'Tree classes implemented. Ready to train.'
+Training Error (0-1 loss): 0.0992
+Testing Error (0-1 loss): 0.1078
+Random Forest Training Error (0-1 loss): 0.0739
+Random Forest Testing Error (0-1 loss): 0.0810
+cap-diameter: 0.3256
+stem-height: 0.2344
+stem-width: 0.1434
+gill-color: 0.0520
+cap-surface: 0.0499
+stem-color: 0.0299
+gill-attachment: 0.0295
+habitat: 0.0239
+season: 0.0230
+ring-type: 0.0216
+cap-color: 0.0180
+cap-shape: 0.0179
+gill-spacing: 0.0168
+does-bruise-or-bleed: 0.0073
+has-ring: 0.0067
+
+
+Testing parameters: {'max_depth': 5, 'min_samples_split': 2, 'criterion': 'misclassification'}
+
+Fold 1 - Custom Decision Tree
+Accuracy    : 0.7535
+Precision   : 0.7539
+Recall      : 0.8309
+F1 Score    : 0.7905
+Specificity : 0.6552
+AUC         : 0.7431
+
+Fold 2 - Custom Decision Tree
+Accuracy    : 0.7611
+Precision   : 0.7518
+Recall      : 0.8447
+F1 Score    : 0.7956
+Specificity : 0.6588
+AUC         : 0.7518
+
+Fold 3 - Custom Decision Tree
+Accuracy    : 0.7622
+Precision   : 0.7567
+Recall      : 0.8406
+F1 Score    : 0.7965
+Specificity : 0.6649
+AUC         : 0.7528
+
+Fold 4 - Custom Decision Tree
+Accuracy    : 0.7409
+Precision   : 0.7622
+Recall      : 0.7653
+F1 Score    : 0.7637
+Specificity : 0.7114
+AUC         : 0.7383
+
+Fold 5 - Custom Decision Tree
+Accuracy    : 0.7631
+Precision   : 0.7489
+Recall      : 0.8664
+F1 Score    : 0.8034
+Specificity : 0.6325
+AUC         : 0.7494
+
+===== Custom Decision Tree Cross-Validation Summary =====
+Accuracy    : 0.7562 ± 0.0084
+Precision   : 0.7547 ± 0.0045
+Recall      : 0.8296 ± 0.0342
+F1          : 0.7899 ± 0.0137
+Specificity : 0.6645 ± 0.0259
+Auc         : 0.7471 ± 0.0055
+Testing parameters: {'max_depth': 5, 'min_samples_split': 2, 'criterion': 'entropy'}
+
+Fold 1 - Custom Decision Tree
+Accuracy    : 0.6391
+Precision   : 0.8340
+Recall      : 0.4435
+F1 Score    : 0.5791
+Specificity : 0.8878
+AUC         : 0.6657
+
+Fold 2 - Custom Decision Tree
+Accuracy    : 0.6394
+Precision   : 0.7139
+Recall      : 0.5751
+F1 Score    : 0.6370
+Specificity : 0.7181
+AUC         : 0.6466
+
+Fold 3 - Custom Decision Tree
+Accuracy    : 0.6487
+Precision   : 0.7230
+Recall      : 0.5924
+F1 Score    : 0.6512
+Specificity : 0.7186
+AUC         : 0.6555
+
+Fold 4 - Custom Decision Tree
+Accuracy    : 0.6463
+Precision   : 0.7127
+Recall      : 0.5926
+F1 Score    : 0.6471
+Specificity : 0.7113
+AUC         : 0.6519
+
+Fold 5 - Custom Decision Tree
+Accuracy    : 0.6758
+Precision   : 0.7812
+Recall      : 0.5828
+F1 Score    : 0.6676
+Specificity : 0.7935
+AUC         : 0.6881
+
+===== Custom Decision Tree Cross-Validation Summary =====
+Accuracy    : 0.6499 ± 0.0135
+Precision   : 0.7530 ± 0.0478
+Recall      : 0.5573 ± 0.0573
+F1          : 0.6364 ± 0.0303
+Specificity : 0.7658 ± 0.0680
+Auc         : 0.6616 ± 0.0147
+Testing parameters: {'max_depth': 5, 'min_samples_split': 2, 'criterion': 'gini'}
+
+Fold 1 - Custom Decision Tree
+Accuracy    : 0.6607
+Precision   : 0.7401
+Recall      : 0.6070
+F1 Score    : 0.6670
+Specificity : 0.7290
+AUC         : 0.6680
+
+Fold 2 - Custom Decision Tree
+Accuracy    : 0.6724
+Precision   : 0.6589
+Recall      : 0.8391
+F1 Score    : 0.7381
+Specificity : 0.4684
+AUC         : 0.6538
+
+Fold 3 - Custom Decision Tree
+Accuracy    : 0.6752
+Precision   : 0.6621
+Recall      : 0.8440
+F1 Score    : 0.7420
+Specificity : 0.4658
+AUC         : 0.6549
+
+Fold 4 - Custom Decision Tree
+Accuracy    : 0.6679
+Precision   : 0.6514
+Recall      : 0.8458
+F1 Score    : 0.7360
+Specificity : 0.4530
+AUC         : 0.6494
+
+Fold 5 - Custom Decision Tree
+Accuracy    : 0.6733
+Precision   : 0.6658
+Recall      : 0.8337
+F1 Score    : 0.7403
+Specificity : 0.4705
+AUC         : 0.6521
+
+===== Custom Decision Tree Cross-Validation Summary =====
+Accuracy    : 0.6699 ± 0.0052
+Precision   : 0.6756 ± 0.0326
+Recall      : 0.7939 ± 0.0935
+F1          : 0.7247 ± 0.0289
+Specificity : 0.5173 ± 0.1060
+Auc         : 0.6556 ± 0.0065
+Testing parameters: {'max_depth': 5, 'min_samples_split': 5, 'criterion': 'misclassification'}
+
+Fold 1 - Custom Decision Tree
+Accuracy    : 0.7525
+Precision   : 0.7535
+Recall      : 0.8289
+F1 Score    : 0.7894
+Specificity : 0.6554
+AUC         : 0.7421
+
+Fold 2 - Custom Decision Tree
+Accuracy    : 0.7611
+Precision   : 0.7518
+Recall      : 0.8447
+F1 Score    : 0.7956
+Specificity : 0.6588
+AUC         : 0.7518
+
+Fold 3 - Custom Decision Tree
+Accuracy    : 0.7622
+Precision   : 0.7567
+Recall      : 0.8406
+F1 Score    : 0.7965
+Specificity : 0.6649
+AUC         : 0.7528
+
+Fold 4 - Custom Decision Tree
+Accuracy    : 0.7407
+Precision   : 0.7621
+Recall      : 0.7650
+F1 Score    : 0.7635
+Specificity : 0.7114
+AUC         : 0.7382
+
+Fold 5 - Custom Decision Tree
+Accuracy    : 0.7631
+Precision   : 0.7489
+Recall      : 0.8664
+F1 Score    : 0.8034
+Specificity : 0.6325
+AUC         : 0.7494
+
+===== Custom Decision Tree Cross-Validation Summary =====
+Accuracy    : 0.7559 ± 0.0085
+Precision   : 0.7546 ± 0.0045
+Recall      : 0.8291 ± 0.0343
+F1          : 0.7897 ± 0.0138
+Specificity : 0.6646 ± 0.0259
+Auc         : 0.7469 ± 0.0057
+Testing parameters: {'max_depth': 5, 'min_samples_split': 5, 'criterion': 'entropy'}
+
+Fold 1 - Custom Decision Tree
+Accuracy    : 0.6391
+Precision   : 0.8340
+Recall      : 0.4435
+F1 Score    : 0.5791
+Specificity : 0.8878
+AUC         : 0.6657
+
+Fold 2 - Custom Decision Tree
+Accuracy    : 0.6394
+Precision   : 0.7139
+Recall      : 0.5751
+F1 Score    : 0.6370
+Specificity : 0.7181
+AUC         : 0.6466
+
+Fold 3 - Custom Decision Tree
+Accuracy    : 0.6487
+Precision   : 0.7230
+Recall      : 0.5924
+F1 Score    : 0.6512
+Specificity : 0.7186
+AUC         : 0.6555
+
+Fold 4 - Custom Decision Tree
+Accuracy    : 0.6463
+Precision   : 0.7127
+Recall      : 0.5926
+F1 Score    : 0.6471
+Specificity : 0.7113
+AUC         : 0.6519
+
+Fold 5 - Custom Decision Tree
+Accuracy    : 0.6758
+Precision   : 0.7812
+Recall      : 0.5828
+F1 Score    : 0.6676
+Specificity : 0.7935
+AUC         : 0.6881
+
+===== Custom Decision Tree Cross-Validation Summary =====
+Accuracy    : 0.6499 ± 0.0135
+Precision   : 0.7530 ± 0.0478
+Recall      : 0.5573 ± 0.0573
+F1          : 0.6364 ± 0.0303
+Specificity : 0.7658 ± 0.0680
+Auc         : 0.6616 ± 0.0147
+Testing parameters: {'max_depth': 5, 'min_samples_split': 5, 'criterion': 'gini'}
+
+Fold 1 - Custom Decision Tree
+Accuracy    : 0.6607
+Precision   : 0.7401
+Recall      : 0.6070
+F1 Score    : 0.6670
+Specificity : 0.7290
+AUC         : 0.6680
+
+Fold 2 - Custom Decision Tree
+Accuracy    : 0.6724
+Precision   : 0.6589
+Recall      : 0.8391
+F1 Score    : 0.7381
+Specificity : 0.4684
+AUC         : 0.6538
+
+Fold 3 - Custom Decision Tree
+Accuracy    : 0.6752
+Precision   : 0.6621
+Recall      : 0.8440
+F1 Score    : 0.7420
+Specificity : 0.4658
+AUC         : 0.6549
+
+Fold 4 - Custom Decision Tree
+Accuracy    : 0.6679
+Precision   : 0.6514
+Recall      : 0.8458
+F1 Score    : 0.7360
+Specificity : 0.4530
+AUC         : 0.6494
+
+Fold 5 - Custom Decision Tree
+Accuracy    : 0.6733
+Precision   : 0.6657
+Recall      : 0.8337
+F1 Score    : 0.7403
+Specificity : 0.4703
+AUC         : 0.6520
+
+===== Custom Decision Tree Cross-Validation Summary =====
+Accuracy    : 0.6699 ± 0.0052
+Precision   : 0.6756 ± 0.0326
+Recall      : 0.7939 ± 0.0935
+F1          : 0.7247 ± 0.0289
+Specificity : 0.5173 ± 0.1060
+Auc         : 0.6556 ± 0.0065
+Testing parameters: {'max_depth': 5, 'min_samples_split': 10, 'criterion': 'misclassification'}
+
+Fold 1 - Custom Decision Tree
+Accuracy    : 0.7525
+Precision   : 0.7535
+Recall      : 0.8289
+F1 Score    : 0.7894
+Specificity : 0.6554
+AUC         : 0.7421
+
+Fold 2 - Custom Decision Tree
+Accuracy    : 0.7611
+Precision   : 0.7517
+Recall      : 0.8449
+F1 Score    : 0.7956
+Specificity : 0.6586
+AUC         : 0.7517
+
+Fold 3 - Custom Decision Tree
+Accuracy    : 0.7622
+Precision   : 0.7567
+Recall      : 0.8406
+F1 Score    : 0.7965
+Specificity : 0.6649
+AUC         : 0.7528
+
+Fold 4 - Custom Decision Tree
+Accuracy    : 0.7406
+Precision   : 0.7622
+Recall      : 0.7645
+F1 Score    : 0.7634
+Specificity : 0.7118
+AUC         : 0.7382
+
+Fold 5 - Custom Decision Tree
+Accuracy    : 0.7631
+Precision   : 0.7489
+Recall      : 0.8664
+F1 Score    : 0.8034
+Specificity : 0.6325
+AUC         : 0.7494
+
+===== Custom Decision Tree Cross-Validation Summary =====
+Accuracy    : 0.7559 ± 0.0085
+Precision   : 0.7546 ± 0.0046
+Recall      : 0.8291 ± 0.0345
+F1          : 0.7896 ± 0.0139
+Specificity : 0.6646 ± 0.0260
+Auc         : 0.7468 ± 0.0057
+Testing parameters: {'max_depth': 5, 'min_samples_split': 10, 'criterion': 'entropy'}
+
+Fold 1 - Custom Decision Tree
+Accuracy    : 0.6391
+Precision   : 0.8340
+Recall      : 0.4435
+F1 Score    : 0.5791
+Specificity : 0.8878
+AUC         : 0.6657
+
+Fold 2 - Custom Decision Tree
+Accuracy    : 0.6394
+Precision   : 0.7139
+Recall      : 0.5751
+F1 Score    : 0.6370
+Specificity : 0.7181
+AUC         : 0.6466
+
+Fold 3 - Custom Decision Tree
+Accuracy    : 0.6487
+Precision   : 0.7230
+Recall      : 0.5924
+F1 Score    : 0.6512
+Specificity : 0.7186
+AUC         : 0.6555
+
+Fold 4 - Custom Decision Tree
+Accuracy    : 0.6464
+Precision   : 0.7128
+Recall      : 0.5926
+F1 Score    : 0.6472
+Specificity : 0.7114
+AUC         : 0.6520
+
+Fold 5 - Custom Decision Tree
+Accuracy    : 0.6758
+Precision   : 0.7812
+Recall      : 0.5828
+F1 Score    : 0.6676
+Specificity : 0.7935
+AUC         : 0.6881
+
+===== Custom Decision Tree Cross-Validation Summary =====
+Accuracy    : 0.6499 ± 0.0135
+Precision   : 0.7530 ± 0.0478
+Recall      : 0.5573 ± 0.0573
+F1          : 0.6364 ± 0.0303
+Specificity : 0.7659 ± 0.0680
+Auc         : 0.6616 ± 0.0147
+Testing parameters: {'max_depth': 5, 'min_samples_split': 10, 'criterion': 'gini'}
+
+Fold 1 - Custom Decision Tree
+Accuracy    : 0.6607
+Precision   : 0.7401
+Recall      : 0.6070
+F1 Score    : 0.6670
+Specificity : 0.7290
+AUC         : 0.6680
+
+Fold 2 - Custom Decision Tree
+Accuracy    : 0.6723
+Precision   : 0.6588
+Recall      : 0.8389
+F1 Score    : 0.7380
+Specificity : 0.4684
+AUC         : 0.6537
+
+Fold 3 - Custom Decision Tree
+Accuracy    : 0.6752
+Precision   : 0.6621
+Recall      : 0.8440
+F1 Score    : 0.7420
+Specificity : 0.4658
+AUC         : 0.6549
+
+Fold 4 - Custom Decision Tree
+Accuracy    : 0.6679
+Precision   : 0.6514
+Recall      : 0.8457
+F1 Score    : 0.7359
+Specificity : 0.4531
+AUC         : 0.6494
+
+Fold 5 - Custom Decision Tree
+Accuracy    : 0.6733
+Precision   : 0.6657
+Recall      : 0.8335
+F1 Score    : 0.7402
+Specificity : 0.4705
+AUC         : 0.6520
+
+===== Custom Decision Tree Cross-Validation Summary =====
+Accuracy    : 0.6699 ± 0.0052
+Precision   : 0.6756 ± 0.0326
+Recall      : 0.7938 ± 0.0935
+F1          : 0.7246 ± 0.0289
+Specificity : 0.5174 ± 0.1060
+Auc         : 0.6556 ± 0.0065
+Testing parameters: {'max_depth': 10, 'min_samples_split': 2, 'criterion': 'misclassification'}
+
+Fold 1 - Custom Decision Tree
+Accuracy    : 0.8682
+Precision   : 0.8641
+Recall      : 0.9072
+F1 Score    : 0.8851
+Specificity : 0.8186
+AUC         : 0.8629
+
+Fold 2 - Custom Decision Tree
+Accuracy    : 0.8555
+Precision   : 0.8327
+Recall      : 0.9227
+F1 Score    : 0.8754
+Specificity : 0.7732
+AUC         : 0.8480
+
+Fold 3 - Custom Decision Tree
+Accuracy    : 0.8668
+Precision   : 0.8491
+Recall      : 0.9235
+F1 Score    : 0.8847
+Specificity : 0.7965
+AUC         : 0.8600
+
+Fold 4 - Custom Decision Tree
+Accuracy    : 0.7673
+Precision   : 0.8060
+Recall      : 0.7570
+F1 Score    : 0.7807
+Specificity : 0.7798
+AUC         : 0.7684
+
+Fold 5 - Custom Decision Tree
+Accuracy    : 0.8534
+Precision   : 0.8340
+Recall      : 0.9208
+F1 Score    : 0.8753
+Specificity : 0.7682
+AUC         : 0.8445
+
+===== Custom Decision Tree Cross-Validation Summary =====
+Accuracy    : 0.8422 ± 0.0379
+Precision   : 0.8372 ± 0.0193
+Recall      : 0.8862 ± 0.0649
+F1          : 0.8603 ± 0.0400
+Specificity : 0.7873 ± 0.0184
+Auc         : 0.8367 ± 0.0349
+Testing parameters: {'max_depth': 10, 'min_samples_split': 2, 'criterion': 'entropy'}
+
+Fold 1 - Custom Decision Tree
+Accuracy    : 0.8364
+Precision   : 0.8922
+Recall      : 0.8050
+F1 Score    : 0.8464
+Specificity : 0.8764
+AUC         : 0.8407
+
+Fold 2 - Custom Decision Tree
+Accuracy    : 0.8482
+Precision   : 0.8782
+Recall      : 0.8407
+F1 Score    : 0.8590
+Specificity : 0.8573
+AUC         : 0.8490
+
+Fold 3 - Custom Decision Tree
+Accuracy    : 0.8066
+Precision   : 0.8995
+Recall      : 0.7324
+F1 Score    : 0.8074
+Specificity : 0.8985
+AUC         : 0.8155
+
+Fold 4 - Custom Decision Tree
+Accuracy    : 0.8339
+Precision   : 0.8605
+Recall      : 0.8311
+F1 Score    : 0.8456
+Specificity : 0.8372
+AUC         : 0.8342
+
+Fold 5 - Custom Decision Tree
+Accuracy    : 0.8218
+Precision   : 0.8826
+Recall      : 0.7855
+F1 Score    : 0.8312
+Specificity : 0.8678
+AUC         : 0.8266
+
+===== Custom Decision Tree Cross-Validation Summary =====
+Accuracy    : 0.8294 ± 0.0141
+Precision   : 0.8826 ± 0.0133
+Recall      : 0.7989 ± 0.0385
+F1          : 0.8379 ± 0.0176
+Specificity : 0.8675 ± 0.0203
+Auc         : 0.8332 ± 0.0115
+Testing parameters: {'max_depth': 10, 'min_samples_split': 2, 'criterion': 'gini'}
+
+Fold 1 - Custom Decision Tree
+Accuracy    : 0.8928
+Precision   : 0.9716
+Recall      : 0.8328
+F1 Score    : 0.8969
+Specificity : 0.9691
+AUC         : 0.9010
+
+Fold 2 - Custom Decision Tree
+Accuracy    : 0.9175
+Precision   : 0.9366
+Recall      : 0.9119
+F1 Score    : 0.9241
+Specificity : 0.9245
+AUC         : 0.9182
+
+Fold 3 - Custom Decision Tree
+Accuracy    : 0.9131
+Precision   : 0.9401
+Recall      : 0.9004
+F1 Score    : 0.9198
+Specificity : 0.9289
+AUC         : 0.9146
+
+Fold 4 - Custom Decision Tree
+Accuracy    : 0.9082
+Precision   : 0.9265
+Recall      : 0.9039
+F1 Score    : 0.9150
+Specificity : 0.9134
+AUC         : 0.9086
+
+Fold 5 - Custom Decision Tree
+Accuracy    : 0.9187
+Precision   : 0.9479
+Recall      : 0.9040
+F1 Score    : 0.9255
+Specificity : 0.9372
+AUC         : 0.9206
+
+===== Custom Decision Tree Cross-Validation Summary =====
+Accuracy    : 0.9101 ± 0.0094
+Precision   : 0.9445 ± 0.0152
+Recall      : 0.8906 ± 0.0291
+F1          : 0.9162 ± 0.0103
+Specificity : 0.9346 ± 0.0189
+Auc         : 0.9126 ± 0.0071
+Testing parameters: {'max_depth': 10, 'min_samples_split': 5, 'criterion': 'misclassification'}
+
+Fold 1 - Custom Decision Tree
+Accuracy    : 0.8614
+Precision   : 0.8516
+Recall      : 0.9111
+F1 Score    : 0.8804
+Specificity : 0.7981
+AUC         : 0.8546
+
+Fold 2 - Custom Decision Tree
+Accuracy    : 0.8552
+Precision   : 0.8325
+Recall      : 0.9224
+F1 Score    : 0.8752
+Specificity : 0.7730
+AUC         : 0.8477
+
+Fold 3 - Custom Decision Tree
+Accuracy    : 0.8686
+Precision   : 0.8518
+Recall      : 0.9232
+F1 Score    : 0.8861
+Specificity : 0.8009
+AUC         : 0.8621
+
+Fold 4 - Custom Decision Tree
+Accuracy    : 0.7674
+Precision   : 0.8059
+Recall      : 0.7573
+F1 Score    : 0.7809
+Specificity : 0.7796
+AUC         : 0.7685
+
+Fold 5 - Custom Decision Tree
+Accuracy    : 0.8529
+Precision   : 0.8332
+Recall      : 0.9211
+F1 Score    : 0.8749
+Specificity : 0.7667
+AUC         : 0.8439
+
+===== Custom Decision Tree Cross-Validation Summary =====
+Accuracy    : 0.8411 ± 0.0373
+Precision   : 0.8350 ± 0.0168
+Recall      : 0.8870 ± 0.0650
+F1          : 0.8595 ± 0.0395
+Specificity : 0.7837 ± 0.0136
+Auc         : 0.8354 ± 0.0340
+Testing parameters: {'max_depth': 10, 'min_samples_split': 5, 'criterion': 'entropy'}
+
+Fold 1 - Custom Decision Tree
+Accuracy    : 0.8360
+Precision   : 0.8915
+Recall      : 0.8050
+F1 Score    : 0.8460
+Specificity : 0.8755
+AUC         : 0.8402
+
+Fold 2 - Custom Decision Tree
+Accuracy    : 0.8477
+Precision   : 0.8779
+Recall      : 0.8400
+F1 Score    : 0.8585
+Specificity : 0.8571
+AUC         : 0.8485
+
+Fold 3 - Custom Decision Tree
+Accuracy    : 0.8062
+Precision   : 0.8988
+Recall      : 0.7322
+F1 Score    : 0.8070
+Specificity : 0.8978
+AUC         : 0.8150
+
+Fold 4 - Custom Decision Tree
+Accuracy    : 0.8335
+Precision   : 0.8602
+Recall      : 0.8307
+F1 Score    : 0.8452
+Specificity : 0.8369
+AUC         : 0.8338
+
+Fold 5 - Custom Decision Tree
+Accuracy    : 0.8217
+Precision   : 0.8821
+Recall      : 0.7859
+F1 Score    : 0.8312
+Specificity : 0.8671
+AUC         : 0.8265
+
+===== Custom Decision Tree Cross-Validation Summary =====
+Accuracy    : 0.8290 ± 0.0141
+Precision   : 0.8821 ± 0.0132
+Recall      : 0.7988 ± 0.0383
+F1          : 0.8376 ± 0.0176
+Specificity : 0.8669 ± 0.0201
+Auc         : 0.8328 ± 0.0115
+Testing parameters: {'max_depth': 10, 'min_samples_split': 5, 'criterion': 'gini'}
+
+Fold 1 - Custom Decision Tree
+Accuracy    : 0.8922
+Precision   : 0.9712
+Recall      : 0.8320
+F1 Score    : 0.8962
+Specificity : 0.9687
+AUC         : 0.9003
+
+Fold 2 - Custom Decision Tree
+Accuracy    : 0.9175
+Precision   : 0.9366
+Recall      : 0.9119
+F1 Score    : 0.9241
+Specificity : 0.9245
+AUC         : 0.9182
+
+Fold 3 - Custom Decision Tree
+Accuracy    : 0.9130
+Precision   : 0.9399
+Recall      : 0.9004
+F1 Score    : 0.9197
+Specificity : 0.9287
+AUC         : 0.9145
+
+Fold 4 - Custom Decision Tree
+Accuracy    : 0.9081
+Precision   : 0.9262
+Recall      : 0.9040
+F1 Score    : 0.9150
+Specificity : 0.9130
+AUC         : 0.9085
+
+Fold 5 - Custom Decision Tree
+Accuracy    : 0.9187
+Precision   : 0.9479
+Recall      : 0.9042
+F1 Score    : 0.9255
+Specificity : 0.9372
+AUC         : 0.9207
+
+===== Custom Decision Tree Cross-Validation Summary =====
+Accuracy    : 0.9099 ± 0.0096
+Precision   : 0.9444 ± 0.0151
+Recall      : 0.8905 ± 0.0295
+F1          : 0.9161 ± 0.0106
+Specificity : 0.9344 ± 0.0188
+Auc         : 0.9124 ± 0.0073
+Testing parameters: {'max_depth': 10, 'min_samples_split': 10, 'criterion': 'misclassification'}
+
+Fold 1 - Custom Decision Tree
+Accuracy    : 0.8599
+Precision   : 0.8478
+Recall      : 0.9138
+F1 Score    : 0.8795
+Specificity : 0.7914
+AUC         : 0.8526
+
+Fold 2 - Custom Decision Tree
+Accuracy    : 0.8602
+Precision   : 0.8393
+Recall      : 0.9226
+F1 Score    : 0.8790
+Specificity : 0.7839
+AUC         : 0.8533
+
+Fold 3 - Custom Decision Tree
+Accuracy    : 0.8666
+Precision   : 0.8510
+Recall      : 0.9202
+F1 Score    : 0.8843
+Specificity : 0.8002
+AUC         : 0.8602
+
+Fold 4 - Custom Decision Tree
+Accuracy    : 0.7724
+Precision   : 0.8080
+Recall      : 0.7662
+F1 Score    : 0.7865
+Specificity : 0.7800
+AUC         : 0.7731
+
+Fold 5 - Custom Decision Tree
+Accuracy    : 0.8513
+Precision   : 0.8321
+Recall      : 0.9192
+F1 Score    : 0.8735
+Specificity : 0.7654
+AUC         : 0.8423
+
+===== Custom Decision Tree Cross-Validation Summary =====
+Accuracy    : 0.8421 ± 0.0352
+Precision   : 0.8356 ± 0.0153
+Recall      : 0.8884 ± 0.0612
+F1          : 0.8606 ± 0.0372
+Specificity : 0.7842 ± 0.0117
+Auc         : 0.8363 ± 0.0321
+Testing parameters: {'max_depth': 10, 'min_samples_split': 10, 'criterion': 'entropy'}
+
+Fold 1 - Custom Decision Tree
+Accuracy    : 0.8355
+Precision   : 0.8911
+Recall      : 0.8043
+F1 Score    : 0.8455
+Specificity : 0.8751
+AUC         : 0.8397
+
+Fold 2 - Custom Decision Tree
+Accuracy    : 0.8474
+Precision   : 0.8771
+Recall      : 0.8406
+F1 Score    : 0.8584
+Specificity : 0.8558
+AUC         : 0.8482
+
+Fold 3 - Custom Decision Tree
+Accuracy    : 0.8062
+Precision   : 0.8985
+Recall      : 0.7327
+F1 Score    : 0.8072
+Specificity : 0.8974
+AUC         : 0.8151
+
+Fold 4 - Custom Decision Tree
+Accuracy    : 0.8337
+Precision   : 0.8602
+Recall      : 0.8313
+F1 Score    : 0.8455
+Specificity : 0.8367
+AUC         : 0.8340
+
+Fold 5 - Custom Decision Tree
+Accuracy    : 0.8211
+Precision   : 0.8812
+Recall      : 0.7856
+F1 Score    : 0.8306
+Specificity : 0.8660
+AUC         : 0.8258
+
+===== Custom Decision Tree Cross-Validation Summary =====
+Accuracy    : 0.8288 ± 0.0140
+Precision   : 0.8816 ± 0.0131
+Recall      : 0.7989 ± 0.0384
+F1          : 0.8374 ± 0.0175
+Specificity : 0.8662 ± 0.0202
+Auc         : 0.8325 ± 0.0114
+Testing parameters: {'max_depth': 10, 'min_samples_split': 10, 'criterion': 'gini'}
+
+Fold 1 - Custom Decision Tree
+Accuracy    : 0.8923
+Precision   : 0.9706
+Recall      : 0.8328
+F1 Score    : 0.8965
+Specificity : 0.9679
+AUC         : 0.9004
+
+Fold 2 - Custom Decision Tree
+Accuracy    : 0.9171
+Precision   : 0.9363
+Recall      : 0.9114
+F1 Score    : 0.9237
+Specificity : 0.9241
+AUC         : 0.9177
+
+Fold 3 - Custom Decision Tree
+Accuracy    : 0.9126
+Precision   : 0.9396
+Recall      : 0.8999
+F1 Score    : 0.9193
+Specificity : 0.9283
+AUC         : 0.9141
+
+Fold 4 - Custom Decision Tree
+Accuracy    : 0.9073
+Precision   : 0.9259
+Recall      : 0.9028
+F1 Score    : 0.9142
+Specificity : 0.9126
+AUC         : 0.9077
+
+Fold 5 - Custom Decision Tree
+Accuracy    : 0.9178
+Precision   : 0.9473
+Recall      : 0.9030
+F1 Score    : 0.9246
+Specificity : 0.9364
+AUC         : 0.9197
+
+===== Custom Decision Tree Cross-Validation Summary =====
+Accuracy    : 0.9094 ± 0.0093
+Precision   : 0.9439 ± 0.0150
+Recall      : 0.8900 ± 0.0288
+F1          : 0.9157 ± 0.0103
+Specificity : 0.9339 ± 0.0187
+Auc         : 0.9119 ± 0.0071
+Testing parameters: {'max_depth': 20, 'min_samples_split': 2, 'criterion': 'misclassification'}
+
+Fold 1 - Custom Decision Tree
+Accuracy    : 0.9029
+Precision   : 0.9100
+Recall      : 0.9173
+F1 Score    : 0.9136
+Specificity : 0.8846
+AUC         : 0.9010
+
+Fold 2 - Custom Decision Tree
+Accuracy    : 0.8838
+Precision   : 0.8712
+Recall      : 0.9257
+F1 Score    : 0.8976
+Specificity : 0.8325
+AUC         : 0.8791
+
+Fold 3 - Custom Decision Tree
+Accuracy    : 0.9156
+Precision   : 0.9144
+Recall      : 0.9349
+F1 Score    : 0.9246
+Specificity : 0.8915
+AUC         : 0.9132
+
+Fold 4 - Custom Decision Tree
+Accuracy    : 0.8114
+Precision   : 0.8942
+Recall      : 0.7432
+F1 Score    : 0.8118
+Specificity : 0.8938
+AUC         : 0.8185
+
+Fold 5 - Custom Decision Tree
+Accuracy    : 0.8991
+Precision   : 0.8961
+Recall      : 0.9268
+F1 Score    : 0.9112
+Specificity : 0.8641
+AUC         : 0.8955
+
+===== Custom Decision Tree Cross-Validation Summary =====
+Accuracy    : 0.8826 ± 0.0370
+Precision   : 0.8972 ± 0.0152
+Recall      : 0.8896 ± 0.0734
+F1          : 0.8918 ± 0.0409
+Specificity : 0.8733 ± 0.0229
+Auc         : 0.8815 ± 0.0333
+Testing parameters: {'max_depth': 20, 'min_samples_split': 2, 'criterion': 'entropy'}
+
+Fold 1 - Custom Decision Tree
+Accuracy    : 0.9954
+Precision   : 0.9957
+Recall      : 0.9960
+F1 Score    : 0.9959
+Specificity : 0.9946
+AUC         : 0.9953
+
+Fold 2 - Custom Decision Tree
+Accuracy    : 0.9969
+Precision   : 0.9979
+Recall      : 0.9964
+F1 Score    : 0.9972
+Specificity : 0.9974
+AUC         : 0.9969
+
+Fold 3 - Custom Decision Tree
+Accuracy    : 0.9938
+Precision   : 0.9966
+Recall      : 0.9921
+F1 Score    : 0.9944
+Specificity : 0.9958
+AUC         : 0.9940
+
+Fold 4 - Custom Decision Tree
+Accuracy    : 0.9938
+Precision   : 0.9953
+Recall      : 0.9934
+F1 Score    : 0.9944
+Specificity : 0.9944
+AUC         : 0.9939
+
+Fold 5 - Custom Decision Tree
+Accuracy    : 0.9933
+Precision   : 0.9972
+Recall      : 0.9907
+F1 Score    : 0.9940
+Specificity : 0.9965
+AUC         : 0.9936
+
+===== Custom Decision Tree Cross-Validation Summary =====
+Accuracy    : 0.9946 ± 0.0013
+Precision   : 0.9966 ± 0.0009
+Recall      : 0.9937 ± 0.0022
+F1          : 0.9951 ± 0.0012
+Specificity : 0.9957 ± 0.0011
+Auc         : 0.9947 ± 0.0012
+Testing parameters: {'max_depth': 20, 'min_samples_split': 2, 'criterion': 'gini'}
+
+Fold 1 - Custom Decision Tree
+Accuracy    : 0.9942
+Precision   : 0.9953
+Recall      : 0.9943
+F1 Score    : 0.9948
+Specificity : 0.9940
+AUC         : 0.9942
+
+Fold 2 - Custom Decision Tree
+Accuracy    : 0.9951
+Precision   : 0.9967
+Recall      : 0.9943
+F1 Score    : 0.9955
+Specificity : 0.9960
+AUC         : 0.9952
+
+Fold 3 - Custom Decision Tree
+Accuracy    : 0.9959
+Precision   : 0.9979
+Recall      : 0.9947
+F1 Score    : 0.9963
+Specificity : 0.9974
+AUC         : 0.9960
+
+Fold 4 - Custom Decision Tree
+Accuracy    : 0.9956
+Precision   : 0.9967
+Recall      : 0.9952
+F1 Score    : 0.9959
+Specificity : 0.9960
+AUC         : 0.9956
+
+Fold 5 - Custom Decision Tree
+Accuracy    : 0.9959
+Precision   : 0.9972
+Recall      : 0.9954
+F1 Score    : 0.9963
+Specificity : 0.9965
+AUC         : 0.9960
+
+===== Custom Decision Tree Cross-Validation Summary =====
+Accuracy    : 0.9953 ± 0.0006
+Precision   : 0.9968 ± 0.0009
+Recall      : 0.9948 ± 0.0005
+F1          : 0.9958 ± 0.0006
+Specificity : 0.9960 ± 0.0011
+Auc         : 0.9954 ± 0.0007
+Testing parameters: {'max_depth': 20, 'min_samples_split': 5, 'criterion': 'misclassification'}
+
+Fold 1 - Custom Decision Tree
+Accuracy    : 0.8969
+Precision   : 0.9033
+Recall      : 0.9136
+F1 Score    : 0.9084
+Specificity : 0.8757
+AUC         : 0.8947
+
+Fold 2 - Custom Decision Tree
+Accuracy    : 0.8785
+Precision   : 0.8589
+Recall      : 0.9324
+F1 Score    : 0.8942
+Specificity : 0.8126
+AUC         : 0.8725
+
+Fold 3 - Custom Decision Tree
+Accuracy    : 0.9178
+Precision   : 0.9205
+Recall      : 0.9319
+F1 Score    : 0.9262
+Specificity : 0.9002
+AUC         : 0.9161
+
+Fold 4 - Custom Decision Tree
+Accuracy    : 0.8112
+Precision   : 0.9010
+Recall      : 0.7359
+F1 Score    : 0.8101
+Specificity : 0.9023
+AUC         : 0.8191
+
+Fold 5 - Custom Decision Tree
+Accuracy    : 0.8949
+Precision   : 0.8916
+Recall      : 0.9242
+F1 Score    : 0.9076
+Specificity : 0.8578
+AUC         : 0.8910
+
+===== Custom Decision Tree Cross-Validation Summary =====
+Accuracy    : 0.8799 ± 0.0365
+Precision   : 0.8951 ± 0.0203
+Recall      : 0.8876 ± 0.0762
+F1          : 0.8893 ± 0.0409
+Specificity : 0.8697 ± 0.0330
+Auc         : 0.8787 ± 0.0328
+Testing parameters: {'max_depth': 20, 'min_samples_split': 5, 'criterion': 'entropy'}
+
+Fold 1 - Custom Decision Tree
+Accuracy    : 0.9941
+Precision   : 0.9940
+Recall      : 0.9955
+F1 Score    : 0.9947
+Specificity : 0.9924
+AUC         : 0.9939
+
+Fold 2 - Custom Decision Tree
+Accuracy    : 0.9957
+Precision   : 0.9970
+Recall      : 0.9952
+F1 Score    : 0.9961
+Specificity : 0.9964
+AUC         : 0.9958
+
+Fold 3 - Custom Decision Tree
+Accuracy    : 0.9920
+Precision   : 0.9932
+Recall      : 0.9923
+F1 Score    : 0.9927
+Specificity : 0.9915
+AUC         : 0.9919
+
+Fold 4 - Custom Decision Tree
+Accuracy    : 0.9920
+Precision   : 0.9934
+Recall      : 0.9919
+F1 Score    : 0.9926
+Specificity : 0.9920
+AUC         : 0.9920
+
+Fold 5 - Custom Decision Tree
+Accuracy    : 0.9925
+Precision   : 0.9950
+Recall      : 0.9916
+F1 Score    : 0.9933
+Specificity : 0.9937
+AUC         : 0.9927
+
+===== Custom Decision Tree Cross-Validation Summary =====
+Accuracy    : 0.9933 ± 0.0015
+Precision   : 0.9945 ± 0.0014
+Recall      : 0.9933 ± 0.0017
+F1          : 0.9939 ± 0.0013
+Specificity : 0.9932 ± 0.0017
+Auc         : 0.9932 ± 0.0015
+Testing parameters: {'max_depth': 20, 'min_samples_split': 5, 'criterion': 'gini'}
+
+Fold 1 - Custom Decision Tree
+Accuracy    : 0.9930
+Precision   : 0.9943
+Recall      : 0.9933
+F1 Score    : 0.9938
+Specificity : 0.9927
+AUC         : 0.9930
+
+Fold 2 - Custom Decision Tree
+Accuracy    : 0.9946
+Precision   : 0.9960
+Recall      : 0.9942
+F1 Score    : 0.9951
+Specificity : 0.9951
+AUC         : 0.9946
+
+Fold 3 - Custom Decision Tree
+Accuracy    : 0.9955
+Precision   : 0.9963
+Recall      : 0.9956
+F1 Score    : 0.9959
+Specificity : 0.9954
+AUC         : 0.9955
+
+Fold 4 - Custom Decision Tree
+Accuracy    : 0.9935
+Precision   : 0.9944
+Recall      : 0.9937
+F1 Score    : 0.9941
+Specificity : 0.9933
+AUC         : 0.9935
+
+Fold 5 - Custom Decision Tree
+Accuracy    : 0.9952
+Precision   : 0.9959
+Recall      : 0.9956
+F1 Score    : 0.9957
+Specificity : 0.9948
+AUC         : 0.9952
+
+===== Custom Decision Tree Cross-Validation Summary =====
+Accuracy    : 0.9944 ± 0.0010
+Precision   : 0.9954 ± 0.0008
+Recall      : 0.9945 ± 0.0010
+F1          : 0.9949 ± 0.0009
+Specificity : 0.9943 ± 0.0011
+Auc         : 0.9944 ± 0.0010
+Testing parameters: {'max_depth': 20, 'min_samples_split': 10, 'criterion': 'misclassification'}
+
+Fold 1 - Custom Decision Tree
+Accuracy    : 0.9178
+Precision   : 0.9386
+Recall      : 0.9128
+F1 Score    : 0.9255
+Specificity : 0.9241
+AUC         : 0.9184
+
+Fold 2 - Custom Decision Tree
+Accuracy    : 0.8831
+Precision   : 0.8658
+Recall      : 0.9320
+F1 Score    : 0.8977
+Specificity : 0.8232
+AUC         : 0.8776
+
+Fold 3 - Custom Decision Tree
+Accuracy    : 0.9133
+Precision   : 0.9168
+Recall      : 0.9275
+F1 Score    : 0.9221
+Specificity : 0.8956
+AUC         : 0.9115
+
+Fold 4 - Custom Decision Tree
+Accuracy    : 0.8085
+Precision   : 0.8900
+Recall      : 0.7417
+F1 Score    : 0.8091
+Specificity : 0.8893
+AUC         : 0.8155
+
+Fold 5 - Custom Decision Tree
+Accuracy    : 0.8973
+Precision   : 0.8910
+Recall      : 0.9299
+F1 Score    : 0.9100
+Specificity : 0.8561
+AUC         : 0.8930
+
+===== Custom Decision Tree Cross-Validation Summary =====
+Accuracy    : 0.8840 ± 0.0397
+Precision   : 0.9004 ± 0.0250
+Recall      : 0.8888 ± 0.0738
+F1          : 0.8929 ± 0.0430
+Specificity : 0.8777 ± 0.0348
+Auc         : 0.8832 ± 0.0368
+Testing parameters: {'max_depth': 20, 'min_samples_split': 10, 'criterion': 'entropy'}
+
+Fold 1 - Custom Decision Tree
+Accuracy    : 0.9925
+Precision   : 0.9930
+Recall      : 0.9937
+F1 Score    : 0.9933
+Specificity : 0.9911
+AUC         : 0.9924
+
+Fold 2 - Custom Decision Tree
+Accuracy    : 0.9938
+Precision   : 0.9954
+Recall      : 0.9934
+F1 Score    : 0.9944
+Specificity : 0.9943
+AUC         : 0.9939
+
+Fold 3 - Custom Decision Tree
+Accuracy    : 0.9906
+Precision   : 0.9923
+Recall      : 0.9908
+F1 Score    : 0.9915
+Specificity : 0.9904
+AUC         : 0.9906
+
+Fold 4 - Custom Decision Tree
+Accuracy    : 0.9909
+Precision   : 0.9920
+Recall      : 0.9913
+F1 Score    : 0.9917
+Specificity : 0.9904
+AUC         : 0.9908
+
+Fold 5 - Custom Decision Tree
+Accuracy    : 0.9902
+Precision   : 0.9945
+Recall      : 0.9880
+F1 Score    : 0.9912
+Specificity : 0.9931
+AUC         : 0.9905
+
+===== Custom Decision Tree Cross-Validation Summary =====
+Accuracy    : 0.9916 ± 0.0014
+Precision   : 0.9934 ± 0.0013
+Recall      : 0.9914 ± 0.0021
+F1          : 0.9924 ± 0.0012
+Specificity : 0.9919 ± 0.0016
+Auc         : 0.9917 ± 0.0013
+Testing parameters: {'max_depth': 20, 'min_samples_split': 10, 'criterion': 'gini'}
+
+Fold 1 - Custom Decision Tree
+Accuracy    : 0.9907
+Precision   : 0.9916
+Recall      : 0.9918
+F1 Score    : 0.9917
+Specificity : 0.9894
+AUC         : 0.9906
+
+Fold 2 - Custom Decision Tree
+Accuracy    : 0.9921
+Precision   : 0.9945
+Recall      : 0.9912
+F1 Score    : 0.9928
+Specificity : 0.9932
+AUC         : 0.9922
+
+Fold 3 - Custom Decision Tree
+Accuracy    : 0.9926
+Precision   : 0.9946
+Recall      : 0.9920
+F1 Score    : 0.9933
+Specificity : 0.9934
+AUC         : 0.9927
+
+Fold 4 - Custom Decision Tree
+Accuracy    : 0.9905
+Precision   : 0.9940
+Recall      : 0.9886
+F1 Score    : 0.9913
+Specificity : 0.9927
+AUC         : 0.9907
+
+Fold 5 - Custom Decision Tree
+Accuracy    : 0.9917
+Precision   : 0.9924
+Recall      : 0.9928
+F1 Score    : 0.9926
+Specificity : 0.9903
+AUC         : 0.9916
+
+===== Custom Decision Tree Cross-Validation Summary =====
+Accuracy    : 0.9915 ± 0.0008
+Precision   : 0.9934 ± 0.0012
+Recall      : 0.9913 ± 0.0014
+F1          : 0.9923 ± 0.0007
+Specificity : 0.9918 ± 0.0016
+Auc         : 0.9915 ± 0.0008
+
+Best Parameters for Custom Decision Tree: {'max_depth': 20, 'min_samples_split': 2, 'criterion': 'gini'}
+Best accuracy: 0.9953
