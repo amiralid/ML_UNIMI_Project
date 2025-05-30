@@ -31,6 +31,5 @@ Mushroom classification addressed by:
 - **Hyperparameter Tuning**: Manual grid search on depth, split criteria, number of estimators, and feature subset strategies.
 
 ## Author
-
 Amirali Davary — May 2025
 ---
